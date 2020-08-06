@@ -15,9 +15,10 @@ exports.DataJson = class DataJson {
 
 	async create(data, params) {
 		if (Array.isArray(data)) {
+			console.log('Im here in Array is Array');
 			return Promise.all(data.map((current) => this.create(current, params)));
 		}
-		this.data = data;
+		this.data.push(data);
 		return data;
 	}
 
