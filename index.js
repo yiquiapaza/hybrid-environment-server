@@ -3,10 +3,14 @@ var app = express();
 var cors = require('cors');
 var bodyParser = require('body-parser');
 
+var fs = require('fs');
+
+var coutryData = JSON.parse(fs.readFileSync('newData.json'));
+
 var router = express.Router();
 
-var data = {};
-var year = {};
+var data = { country_code: 0 };
+var year = { year: 1950 };
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -33,6 +37,14 @@ router.post('/data', [originalUrl], (req, res) => {
 
 router.get('/year', [originalUrl], (req, res) => {
 	res.send(year);
+});
+
+router.get('/year/:name', [originalUrl], (req, res) => {
+	var name = req.params.name;
+	var out = coutryData.filter(
+		(country) => country.name === name && country.year === year.year
+	);
+	res.send(out[0]);
 });
 
 router.post('/year', [originalUrl], (req, res) => {
