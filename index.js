@@ -25,6 +25,12 @@ router.get('/', [originalUrl], (req, res) => {
 	res.send('Hello wordl');
 });
 
+router.post('/axis', [originalUrl], (req, res) => {
+	let data = req.body;
+
+	res.status(200).json({ message: 'ok' });
+});
+
 router.get('/data', [originalUrl], (req, res) => {
 	res.send(data);
 });
