@@ -18,6 +18,7 @@ router.get('/', (_, res) => {
 
 router.get('/country', (_, res) => {
 	res.status(200).send(country);
+	//country.status = 0;
 });
 
 router.post('/country', (req, res) => {
