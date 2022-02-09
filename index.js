@@ -1,15 +1,17 @@
-const express = require('express');
-const fs = require('fs');
+import express from 'express';
+import fs from 'fs';
+
 const raw_data = JSON.parse(fs.readFileSync('raw_data.json'));
 const app = express();
 const router = express.Router();
-const cors = require('cors')
+//$ npm install express --save
+//import cors from 'cors';
 
-app.use(cors());
-app.use(express.json());
+//app.use(cors());
+//app.use(express.json());
 
 let country = { name: '', status: 0 };
-let state = {state: 0};
+let state = { state: 0 };
 
 router.get('/', (_, res) => {
 	console.log(raw_data);
@@ -26,14 +28,14 @@ router.post('/country', (req, res) => {
 	res.status(200).send('Success');
 });
 
-router.get('/state', (_, res)=> {
+router.get('/state', (_, res) => {
 	res.status(200).send(state);
-})
+});
 
 router.post('/state', (req, res) => {
 	state = res.body;
-	res.status(200).send('Success')
-})
+	res.status(200).send('Success');
+});
 
 app.use(router);
 app.listen(3000);
