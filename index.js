@@ -46,6 +46,7 @@ router.post('/state', (req, res) => {
 
 router.post('/rotation', (req, res) => {
 	rotation = req.body;
+	console.log(req);
 	console.log(rotation)
 	res.status(200).send('Success');
 });
