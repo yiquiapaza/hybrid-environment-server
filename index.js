@@ -4,6 +4,10 @@ import fs from 'fs';
 const raw_data = JSON.parse(fs.readFileSync('raw_data.json'));
 const app = express();
 const router = express.Router();
+
+app.use(express.json());
+app.use(express.urlencoded());
+
 //$ npm install express --save
 //import cors from 'cors';
 
@@ -11,8 +15,7 @@ const router = express.Router();
 //app.use(express.json());
 
 let country = { name: '', status: 0 };
-let state = { state: 0 };
-let rotation = {};
+let rotation = { x: 0, y: 0, z: 0 };
 
 //TODO:
 //	Create GET and POST position service URL
@@ -35,24 +38,15 @@ router.post('/country', (req, res) => {
 	res.status(200).send('Success');
 });
 
-router.get('/state', (_, res) => {
-	res.status(200).send(state);
-});
-
-router.post('/state', (req, res) => {
-	state = res.body;
-	res.status(200).send('Success');
-});
-
 router.post('/rotation', (req, res) => {
-	rotation = req.body;
-	console.log(req);
-	console.log(rotation)
+	console.log(req.body);
+	//rotation = req.body;
+	//console.log(rotation)
 	res.status(200).send('Success');
 });
 
 router.get('/rotation',(req, res) => {
-	console.log(rotation);
+	//console.log(rotation);
 	res.status(200).send('Success');
 })
 
