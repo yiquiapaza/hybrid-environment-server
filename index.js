@@ -9,16 +9,12 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 //$ npm install express --save
-//import cors from 'cors';
-
-//app.use(cors());
-//app.use(express.json());
 
 let country = { name: '', status: 0 };
 let rotation = { x: 0, y: 0, z: 0 };
 
-//TODO:
-//	Create GET and POST position service URL
+// TODO:
+// Create GET and POST position service URL
 // 	Create GET and POST rotation service URL
 // 	Create a hook for interaction or maybe just a new URL for GET and POST information about elements
 //  Create log for eeach event
@@ -39,12 +35,13 @@ router.post('/country', (req, res) => {
 });
 
 router.post('/rotation', (req, res) => {
-	console.log(req.body);
+	//console.log(req.body);
 	rotation = req.body;
 	//console.log(rotation)
 	res.status(200).send('Success');
 });
 
+// [x]  Cr
 router.get('/rotation',(req, res) => {
 	rotation.x = parseFloat(rotation.x);
 	rotation.y = parseFloat(rotation.y);
