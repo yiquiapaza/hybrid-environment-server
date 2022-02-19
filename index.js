@@ -40,14 +40,16 @@ router.post('/country', (req, res) => {
 
 router.post('/rotation', (req, res) => {
 	console.log(req.body);
-	//rotation = req.body;
+	rotation = req.body;
 	//console.log(rotation)
 	res.status(200).send('Success');
 });
 
 router.get('/rotation',(req, res) => {
-	//console.log(rotation);
-	res.status(200).send('Success');
+	rotation.x = parseFloat(rotation.x);
+	rotation.y = parseFloat(rotation.y);
+	rotation.z = parseFloat(rotation.z);
+	res.status(200).send(rotation);
 })
 
 app.use(router);
