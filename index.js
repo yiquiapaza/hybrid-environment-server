@@ -21,6 +21,11 @@ let rotation = { x: 0, y: 0, z: 0 };
 // Create a hook for interaction or maybe just a new URL for GET and POST information about elements
 // Create log for eeach event
 
+router.post('/', (req, res) => {
+	console.log(req.body);
+	res.status(200).send('Success');
+})
+
 router.get('/', (_, res) => {
 	console.log(raw_data);
 	res.send(raw_data);
