@@ -1,8 +1,8 @@
 // core dep
 import express from 'express';
-import fs from 'fs';
+//import fs from 'fs';
 
-const raw_data = JSON.parse(fs.readFileSync('raw_data.json'));
+//const raw_data = JSON.parse(fs.readFileSync('raw_data.json'));
 
 // express config
 const app = express();
@@ -26,9 +26,9 @@ router.post('/', (req, res) => {
 	res.status(200).send('Success');
 })
 
-router.get('/', (_, res) => {
-	console.log(raw_data);
-	res.send(raw_data);
+router.get('/', (req, res) => {
+	console.log(req.body);
+	res.send(req.body);
 });
 
 router.get('/country', (_, res) => {
