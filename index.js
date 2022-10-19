@@ -14,6 +14,7 @@ app.use(express.urlencoded());
 // global
 let country = { name: '', state: 0 };
 let rotation = { x: 0, y: 0, z: 0 };
+let state = { state: 'bar00'};
 
 // TODO:
 // Create GET and POST position service URL
@@ -23,12 +24,13 @@ let rotation = { x: 0, y: 0, z: 0 };
 
 router.post('/', (req, res) => {
 	console.log(req.body);
+	state = req.body;
 	res.status(200).send('Success');
 })
 
 router.get('/', (req, res) => {
-	console.log(req.body);
-	res.send(req.body);
+	console.log(state);
+	res.send(state);
 });
 
 router.get('/country', (_, res) => {
