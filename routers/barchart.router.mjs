@@ -1,5 +1,5 @@
 import express from 'express';
-import { getBarchart } from '../controllers/barchartController.mjs'
+import { getBarchart } from '../controllers/barchart.controller.mjs'
 
 const router = express.Router();
 

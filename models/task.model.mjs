@@ -1,13 +1,13 @@
 import path from 'path';
 import fs from 'fs';
-import __dir from '../utils/path.mjs';
+import __dir from '../utils/path.util.mjs';
 
-const pathMetadata = path.join(__dir, "data", "metadata-barchart.json");
+const pathMetadata = path.join(__dir, "data", "task.json");
 
-export const getAll = async () => {
+export const getBarchartTask01 = async () => {
     try {
         const data = await fs.promises.readFile(pathMetadata, 'utf8');
-        return data;
+        return data
     } catch (error) {
         console.log(error);
     }

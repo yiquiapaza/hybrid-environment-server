@@ -1,7 +1,7 @@
 // core dep
 import express from 'express';
-import barcharRouters from './routers/barchart.mjs';
-import scatterplotRouters from './routers/scatterplot.mjs';
+import barcharRouters from './routers/barchart.router.mjs';
+import scatterplotRouters from './routers/scatterplot.router.mjs';
 //import fs from 'fs';
 
 //const raw_data = JSON.parse(fs.readFileSync('raw_data.json'));
