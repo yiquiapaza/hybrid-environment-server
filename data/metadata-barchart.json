@@ -1,0 +1,128 @@
+[
+  {
+    "id": "bar0",
+    "parameter": "",
+    "parameter1": "",
+    "parameter2": "",
+    "status": false,
+  },
+  {
+    "id": "bar1",
+    "parameter": "A",
+    "parameter1": "OC",
+    "parameter2": "AUS",
+    "status": true,
+  },
+  {
+    "id": "bar1",
+    "parameter": "A",
+    "parameter1": "OC",
+    "parameter2": "AUS",
+    "status": true,
+  },
+  {
+    "id": "bar2",
+    "parameter": "B",
+    "parameter1": "AS",
+    "parameter2": "CHN",
+    "status": true
+  },
+  {
+    "id": "bar3",
+    "parameter": "C",
+    "parameter1": "EU",
+    "parameter2": "DNK",
+    "status": true
+  },
+  {
+    "id": "bar4",
+    "parameter": "D",
+    "parameter1": "AF",
+    "parameter2": "GMB",
+    "status": true
+  },
+  {
+    "id": "bar5",
+    "parameter": "E",
+    "parameter1": "EU",
+    "parameter2": "HUN",
+    "status": true
+  },
+  {
+    "id": "bar6",
+    "parameter": "F",
+    "parameter1": "AS",
+    "parameter2": "IND",
+    "status": true
+  },
+  {
+    "id": "bar7",
+    "parameter": "G",
+    "parameter1": "EU",
+    "parameter2": "ISL",
+    "status": true
+  },
+  {
+    "id": "bar8",
+    "parameter": "H",
+    "parameter1": "AS",
+    "parameter2": "ISR",
+    "status": true
+  },
+  {
+    "id": "bar9",
+    "parameter": "I",
+    "parameter1": "AF",
+    "parameter2": "LBR",
+    "status": true
+  },
+  {
+    "id": "bar10",
+    "parameter": "J",
+    "parameter1": "EU",
+    "parameter2": "NOR",
+    "status": true
+  },
+  {
+    "id": "bar11",
+    "parameter": "K",
+    "parameter1": "OC",
+    "parameter2": "PYF",
+    "status": true
+  },
+  {
+    "id": "bar12",
+    "parameter": "L",
+    "parameter1": "AF",
+    "parameter2": "RWA",
+    "status": true
+  },
+  {
+    "id": "bar13",
+    "parameter": "M",
+    "parameter1": "AS",
+    "parameter2": "SAU",
+    "status": true
+  },
+  {
+    "id": "bar14",
+    "parameter": "N",
+    "parameter1": "EU",
+    "parameter2": "SWE",
+    "status": true
+  },
+  {
+    "id": "bar15",
+    "parameter": "O",
+    "parameter1": "NA",
+    "parameter2": "USA",
+    "status": true
+  },
+  {
+    "id": "bar16",
+    "parameter": "P",
+    "parameter1": "AF",
+    "parameter2": "ZAP",
+    "status": true
+  }
+]

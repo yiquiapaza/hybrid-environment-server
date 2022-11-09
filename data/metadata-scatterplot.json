@@ -1,0 +1,121 @@
+[
+  {
+    "id": "scatter0",
+    "parameter": "",
+    "parameter1": "",
+    "parameter2": "",
+    "status": false,
+  },
+  {
+    "id": "scatter1",
+    "parameter": "A",
+    "parameter1": "OC",
+    "parameter2": "AUS",
+    "status": true,
+  },
+  {
+    "id": "scatter2",
+    "parameter": "B",
+    "parameter1": "AS",
+    "parameter2": "CHN",
+    "status": true
+  },
+  {
+    "id": "scatter3",
+    "parameter": "C",
+    "parameter1": "EU",
+    "parameter2": "DNK",
+    "status": true
+  },
+  {
+    "id": "scatter4",
+    "parameter": "D",
+    "parameter1": "AF",
+    "parameter2": "GMB",
+    "status": true
+  },
+  {
+    "id": "scatter5",
+    "parameter": "E",
+    "parameter1": "EU",
+    "parameter2": "HUN",
+    "status": true
+  },
+  {
+    "id": "scatter6",
+    "parameter": "F",
+    "parameter1": "AS",
+    "parameter2": "IND",
+    "status": true
+  },
+  {
+    "id": "scatter7",
+    "parameter": "G",
+    "parameter1": "EU",
+    "parameter2": "ISL",
+    "status": true
+  },
+  {
+    "id": "scatter8",
+    "parameter": "H",
+    "parameter1": "AS",
+    "parameter2": "ISR",
+    "status": true
+  },
+  {
+    "id": "scatter9",
+    "parameter": "I",
+    "parameter1": "AF",
+    "parameter2": "LBR",
+    "status": true
+  },
+  {
+    "id": "scatter10",
+    "parameter": "J",
+    "parameter1": "EU",
+    "parameter2": "NOR",
+    "status": true
+  },
+  {
+    "id": "scatter11",
+    "parameter": "K",
+    "parameter1": "OC",
+    "parameter2": "PYF",
+    "status": true
+  },
+  {
+    "id": "scatter12",
+    "parameter": "L",
+    "parameter1": "AF",
+    "parameter2": "RWA",
+    "status": true
+  },
+  {
+    "id": "scatter13",
+    "parameter": "M",
+    "parameter1": "AS",
+    "parameter2": "SAU",
+    "status": true
+  },
+  {
+    "id": "scatter14",
+    "parameter": "N",
+    "parameter1": "EU",
+    "parameter2": "SWE",
+    "status": true
+  },
+  {
+    "id": "scatter15",
+    "parameter": "O",
+    "parameter1": "NA",
+    "parameter2": "USA",
+    "status": true
+  },
+  {
+    "id": "scatter16",
+    "parameter": "P",
+    "parameter1": "AF",
+    "parameter2": "ZAP",
+    "status": true
+  }
+]

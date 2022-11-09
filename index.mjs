@@ -1,7 +1,7 @@
 // core dep
 import express from 'express';
 import barcharRouters from './routers/barchart.mjs';
-//const scatterplotRouters = require('./routers/scatterplot');
+import scatterplotRouters from './routers/scatterplot.mjs';
 //import fs from 'fs';
 
 //const raw_data = JSON.parse(fs.readFileSync('raw_data.json'));
@@ -16,7 +16,7 @@ app.use(express.urlencoded());
 // Routes
 
 app.use('/barchart', barcharRouters);
-//app.use('/scatterplot', scatterplotRouters);
+app.use('/scatterplot', scatterplotRouters);
 
 // TODO:
 // Create GET and POST position service URL

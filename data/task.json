@@ -1,14 +1,14 @@
 [
-    {
-        "task": 1 ,
-        "selection": 1
-    },
-    {
-        "task": 2 ,
-        "selection": 2
-    },
-    {
-        "task": 3,
-        "selection": 3
-    }
+  {
+    "task": 1 ,
+    "selection": 1
+  },
+  {
+    "task": 2 ,
+    "selection": 2
+  },
+  {
+    "task": 3,
+    "selection": 3
+  }
 ]
