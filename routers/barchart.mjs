@@ -1,11 +1,9 @@
 import express from 'express';
+import { getBarchart } from '../controllers/barchartController.mjs'
 
 const router = express.Router();
 
-router.get('/', (req, res) =>{
-    console.log("Barchart GET");
-    res.sendStatus(200);
-});
+router.get('/', getBarchart);
 
 router.post('/desktop', (req, res) => {
     console.log("Barchart POST desktop");
