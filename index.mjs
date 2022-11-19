@@ -17,7 +17,7 @@ app.use(express.urlencoded());
 
 app.use('/barchart', barcharRouters);
 app.use('/scatterplot', scatterplotRouters);
-app.use('/task', a)
+//app.use('/task', a)
 
 // TODO:
 // Create GET and POST position service URL
