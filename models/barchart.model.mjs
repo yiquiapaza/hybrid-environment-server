@@ -16,11 +16,12 @@ export const getAll = async () => {
 };
 
 export const getByStatus = async (task) => {
-  const tasks = JSON.parse( await getBarchartTasks());
+  const tasks = await getBarchartTasks();
   let elements = [];
   const _task = tasks.find(item => item.task === Number(task));
+  console.log(_task);
   try {
-    elements =JSON.parse( await fs.promises.readFile(pathMetadata, 'utf-8'));
+    elements = JSON.parse( await fs.promises.readFile(pathMetadata, 'utf-8'));
     //elements = elements.filter(item => item.status === 0);
     console.log(elements);
     return elements;
