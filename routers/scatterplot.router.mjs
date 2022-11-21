@@ -1,4 +1,5 @@
 import express from 'express';
+import { postScatterplotElement } from '../controllers/scatterplot.controller.mjs';
 
 const router = express.Router();
 
@@ -7,10 +8,7 @@ router.get('/', (req, res) =>{
   res.sendStatus(200);
 });
 
-router.post('/desktop', (req, res) => {
-  console.log("Scatterplot desktop");
-  res.sendStatus(200);
-});
+router.post('/desktop', postScatterplotElement);
 
 router.post('/hololens', (req, res) => {
   console.log("Scatterplot hololens");

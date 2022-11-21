@@ -15,6 +15,17 @@ export const getAll = async () => {
     }
 }
 
+export const addElement = async (data) => {
+    let element = [];
+    try {
+        let elements = await getAll();
+        console.log(elements);
+       //element = elements.find(item => item.id === data.id);
+    } catch (error) {
+        console.log(error)
+    }
+};
+
 export const getByStatus = async (task) => {
     const tasks = await getScatterplotTasks();
     let elements = [];

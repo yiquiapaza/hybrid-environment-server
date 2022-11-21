@@ -4,14 +4,14 @@
     "parameter": "",
     "parameter1": "",
     "parameter2": "",
-    "status": 0,
+    "status": 0
   },
   {
     "id": "scatter1",
     "parameter": "A",
     "parameter1": "OC",
     "parameter2": "AUS",
-    "status": true,
+    "status": true
   },
   {
     "id": "scatter2",
