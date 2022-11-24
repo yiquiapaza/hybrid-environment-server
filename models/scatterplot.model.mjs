@@ -16,11 +16,13 @@ export const getAll = async () => {
 }
 
 export const addElement = async (data) => {
-    let element = [];
+    let element = {};
+    console.log(data);
     try {
         let elements = await getAll();
         console.log(elements);
-       //element = elements.find(item => item.id === data.id);
+       element = elements.find(item => item.id === data.id);
+       console.log(element);
     } catch (error) {
         console.log(error)
     }
