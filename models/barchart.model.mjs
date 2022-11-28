@@ -1,31 +1,23 @@
 import { getBarchartTasks } from './task.model.mjs';
 
-import path from 'path';
-import fs from 'fs';
-import __dir from '../utils/path.util.mjs';
+const barElements = [];
+const scatterElements = [];
 
-const pathMetadata = path.join(__dir, "data", "metadata-barchart.json");
-
-export const getAll = async () => {
-    try {
-        const data = await fs.promises.readFile(pathMetadata, 'utf8');
-        return JSON.parse(data);
-    } catch (error) {
-        console.log(error);
-    }
+export const saveBarElement = (data) => {
+  barElements.push(data);
 };
 
-export const getByStatus = async (task) => {
-  const tasks = await getBarchartTasks();
-  let elements = [];
+export const saveScatterElement = (data) => {
+  scatterElements.push(data);
+};
+
+export const getAll =  () => {
+  return barElements;
+};
+
+export const getByTasks = (task) => {
+  const tasks = getBarchartTasks();
   const _task = tasks.find(item => item.task === Number(task));
   console.log(_task);
-  try {
-    elements = JSON.parse( await fs.promises.readFile(pathMetadata, 'utf-8'));
-    //elements = elements.filter(item => item.status === 0);
-    console.log(elements);
-    return elements;
-  } catch (error) {
-    console.log(error);
-  }
+  return barElements;
 }

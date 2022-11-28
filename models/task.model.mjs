@@ -1,24 +1,38 @@
-import path from 'path';
-import fs from 'fs';
-import __dir from '../utils/path.util.mjs';
+const barChartTasks = [
+  {
+    "task": 1 ,
+    "selection": 1
+  },
+  {
+    "task": 2 ,
+    "selection": 2
+  },
+  {
+    "task": 3,
+    "selection": 3
+  }
+];
 
-const pathMetadata = path.join(__dir, "data", "task.json");
+const scatterPlotTasks = [
+  {
+    "task": 1 ,
+    "selection": 1
+  },
+  {
+    "task": 2 ,
+    "selection": 2
+  },
+  {
+    "task": 3,
+    "selection": 3
+  }
+]
 
-export const getBarchartTasks = async () => {
-    try {
-        const data = await fs.promises.readFile(pathMetadata, 'utf8');
-        return JSON.parse(data);
-    } catch (error) {
-        console.log(error);
-    }
+export const getBarchartTasks = () => {
+    return barChartTasks;
 }
 
 
-export const getScatterplotTasks = async () => {
-    try {
-        const data = await fs.promises.readFile(pathMetadata, 'utf-8');
-        return JSON.parse(data);
-    } catch (error) {
-        console.log(error);
-    }
+export const getScatterplotTasks = () => {
+    return scatterPlotTasks;
 }

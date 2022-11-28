@@ -1,9 +1,14 @@
-import { getAll, getByStatus } from '../models/barchart.model.mjs';
+import { getAll, getByTasks, saveBarElement } from '../models/barchart.model.mjs';
 
-export const getBarchart = async (req, res) => {
-  res.json(await getAll());
+export const getBarchart = (req, res) => {
+  res.json(getAll());
+}
+
+export const saveElement = (req, res) => {
+  saveBarElement(req.body)
+  res.sendStatus(200);
 }
 
 export const getBarchartByTask = async (req, res) => {
-  res.json(await getByStatus(req.query.task));
+  res.json(getByTasks(req.query.task));
 }
