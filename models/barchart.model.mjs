@@ -2,7 +2,7 @@ import { getTaskById } from './task.model.mjs';
 
 const barElements = [];
 
-export const saveBarElement = (data, task) => {
+export const pushElement = (data, task) => {
   const _task = getTaskById(task);
   if (_task.selection < barElements.length + 1) {
     barElements.push(data);

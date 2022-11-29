@@ -2,7 +2,7 @@
 import express from 'express';
 import barcharRouters from './routers/barchart.router.mjs';
 import scatterplotRouters from './routers/scatterplot.router.mjs';
-//import fs from 'fs';
+import linechartRouters from './routers/linechart.router.mjs';
 
 //const raw_data = JSON.parse(fs.readFileSync('raw_data.json'));
 
@@ -17,7 +17,7 @@ app.use(express.urlencoded());
 
 app.use('/barchart', barcharRouters);
 app.use('/scatterplot', scatterplotRouters);
-//app.use('/task', a)
+app.use('/linechart', linechartRouters);
 
 // TODO:
 // Create GET and POST position service URL

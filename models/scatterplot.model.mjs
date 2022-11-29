@@ -1,45 +1,17 @@
-import { getScatterplotTasks } from "./task.model.mjs";
+import { getTaskById } from "./task.model.mjs";
 
-import path from 'path';
-import fs from 'fs';
-import __dir from "../utils/path.util.mjs";
-
-const pathMetadata = path.join(__dir, 'data', "metadata-scatterplot.json");
+const scatterElements = [];
 
 export const getAll = async () => {
-    try {
-        const data = await fs.promises.readFile(pathMetadata, 'utf8');
-        return JSON.parse(data);
-    } catch (error) {
-        console.log(error);
-    }
+    return scatterElements;
 }
 
-export const saveScatterElement = (data) => {
-  scatterElements.push(data);
-};
-export const addElement = async (data) => {
-    let element = {};
-    console.log(data);
-    try {
-        let elements = await getAll();
-        console.log(elements);
-       element = elements.find(item => item.id === data.id);
-       console.log(element);
-    } catch (error) {
-        console.log(error)
+export const pushElement = (data, task) => {
+    const _task = getTaskById(task);
+    if (_task.selection < scatterElements.length + 1) {
+        scatterElements.push(data);
+        scatterElements.shift();
     }
+    else
+        scatterElements.push(data);
 };
-
-export const getByStatus = async (task) => {
-    const tasks = await getScatterplotTasks();
-    let elements = [];
-    const _task = tasks.find(item => item.task === Number(task));
-    console.log(_task);
-    try {
-        elements = JSON.parse( await fs.promises.readFile(pathMetadata, 'utf8'));
-        return elements;
-    } catch (error) {
-        console.log(error);
-    }
-}
