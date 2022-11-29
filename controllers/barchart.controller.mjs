@@ -10,5 +10,6 @@ export const saveElement = (req, res) => {
 }
 
 export const getBarchartByTask = async (req, res) => {
+  console.log(req.query.task)
   res.json(getByTasks(req.query.task));
 }

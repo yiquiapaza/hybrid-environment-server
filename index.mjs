@@ -1,6 +1,5 @@
 // core dep
 import express from 'express';
-import bodyParser from 'body-parser';
 import barcharRouters from './routers/barchart.router.mjs';
 import scatterplotRouters from './routers/scatterplot.router.mjs';
 //import fs from 'fs';
@@ -10,7 +9,6 @@ import scatterplotRouters from './routers/scatterplot.router.mjs';
 const app = express();
 // express config
 app.use(express.json());
-app.use(bodyParser.json());
 app.use(express.urlencoded());
 
 
