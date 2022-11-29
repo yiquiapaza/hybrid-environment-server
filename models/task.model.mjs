@@ -36,3 +36,7 @@ export const getBarchartTasks = () => {
 export const getScatterplotTasks = () => {
     return scatterPlotTasks;
 }
+
+export const getTaskById = (task) => {
+  return barChartTasks.find(item => item.task === Number(task));
+}

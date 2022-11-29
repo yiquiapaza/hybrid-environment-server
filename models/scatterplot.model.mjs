@@ -15,6 +15,9 @@ export const getAll = async () => {
     }
 }
 
+export const saveScatterElement = (data) => {
+  scatterElements.push(data);
+};
 export const addElement = async (data) => {
     let element = {};
     console.log(data);
