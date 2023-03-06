@@ -20,6 +20,7 @@ app.use('/barchart', barcharRouters);
 app.use('/scatterplot', scatterplotRouters);
 app.use('/linechart', linechartRouters);
 app.use('/menu', positionRouters)
+app.use('/position', positionRouters)
 // TODO:
 // Create GET and POST position service URL
 // Create GET and POST rotation service URL

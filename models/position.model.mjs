@@ -1,10 +1,17 @@
-let position = {};
-let state = { reset: false };
+let position = {
+  x: 0,
+  y: 0,
+  z: 0,
+  state: false
+};
+//let state = { reset: false };
 export const savePostion = (data) => {
+  console.log(data);
   position = {
     x: data.x,
     y: data.y,
     z: data.z,
+    state: false
   };
 };
 
@@ -13,10 +20,10 @@ export const getPostion = () => {
 };
 
 export const reset = () => {
-  if (state.reset) {
-    state = { reset: true };
+  if (position.state) {
+    position.state = false;
   } else {
-    state = { reset: true };
+    position.state = true;
   }
-  return state;
+  return position;
 };
