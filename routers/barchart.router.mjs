@@ -1,5 +1,9 @@
 import express from 'express';
-import { getBarchart, addElement, } from '../controllers/barchart.controller.mjs'
+import {
+  getBarchart,
+  addElement,
+  resetElement,
+} from '../controllers/barchart.controller.mjs';
 
 const router = express.Router();
 
@@ -9,10 +13,6 @@ router.post('/desktop', addElement);
 
 router.post('/hololens', addElement);
 
-router.get('/reset');
-
-router.get('/reset/get')
-
-router.post('/reset/set')
+router.get('/reset', resetElement);
 
 export default router;

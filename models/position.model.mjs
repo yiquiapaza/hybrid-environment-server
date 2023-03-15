@@ -11,19 +11,9 @@ export const savePostion = (data) => {
     x: data.x,
     y: data.y,
     z: data.z,
-    state: false
   };
 };
 
 export const getPostion = () => {
-  return position;
-};
-
-export const reset = () => {
-  if (position.state) {
-    position.state = false;
-  } else {
-    position.state = true;
-  }
   return position;
 };

@@ -1,8 +1,7 @@
 import {
   getAll,
   pushElement,
-  reset,
-  saveState,
+  clearBarElement,
 } from '../models/barchart.model.mjs';
 
 export const getBarchart = (req, res) => {
@@ -14,15 +13,6 @@ export const addElement = (req, res) => {
   res.sendStatus(200);
 };
 
-export const state = (req, res) => {
-  res.json();
-};
-
-export const setState = (req, res) => {
-  saveState(req.body);
-  res.sendStatus(200);
-};
-
-export const getReset = (req, res) => {
-  res.json(reset());
+export const resetElement = (req, res) => {
+  res.json(clearBarElement());
 };

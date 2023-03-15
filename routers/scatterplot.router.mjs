@@ -1,5 +1,9 @@
 import express from 'express';
-import { getElement, addElement } from '../controllers/scatterplot.controller.mjs';
+import {
+  getElement,
+  addElement,
+  resetElement,
+} from '../controllers/scatterplot.controller.mjs';
 
 const router = express.Router();
 
@@ -9,4 +13,5 @@ router.post('/desktop', addElement);
 
 router.post('/hololens', addElement);
 
+router.get('/reset', resetElement);
 export default router;
