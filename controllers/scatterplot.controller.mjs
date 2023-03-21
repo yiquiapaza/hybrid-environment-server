@@ -9,10 +9,10 @@ export const getElement = (req, res) => {
 };
 
 export const addElement = (req, res) => {
-  pushElement(res.body, req.query.task);
+  pushElement(req.body);
   res.sendStatus(200);
 };
 
-export const resetElement = (resq, res) => {
+export const resetElement = (req, res) => {
   res.json(clearScatteplotElement());
 };

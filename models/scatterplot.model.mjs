@@ -1,11 +1,13 @@
 let scatterElements = [];
 
-export const getAll = async () => {
-  return scatterElements;
+export const pushElement = (data) => {
+  console.log(data);
+  scatterElements.push(data);
 };
 
-export const pushElement = (data) => {
-  scatterElements.push(data);
+export const getAll = () => {
+  console.log(scatterElements);
+  return scatterElements;
 };
 
 export const clearScatteplotElement = () => {

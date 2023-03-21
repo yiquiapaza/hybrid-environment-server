@@ -9,7 +9,7 @@ export const getBarchart = (req, res) => {
 };
 
 export const addElement = (req, res) => {
-  pushElement(req.body, req.query.task);
+  pushElement(req.body);
   res.sendStatus(200);
 };
 
