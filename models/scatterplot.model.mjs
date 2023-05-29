@@ -2,6 +2,12 @@ let scatterElements = [];
 
 export const pushElement = (data) => {
   console.log(data);
+  scatterElements = scatterElements.filter((value, index) => {
+    const _value = JSON.stringify(value);
+    return index === scatterElements.findIndex(obj => {
+      return JSON.stringify(obj) === _value
+    })
+  })
   scatterElements.push(data);
 };
 
